@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""pagination tasks"""
 import csv
 import math
 from typing import List, Tuple
@@ -10,6 +11,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """first function to be called"""
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -20,10 +22,10 @@ class Server:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
-
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """returns data of the specified page"""
         data = self.dataset()
         assert type(page) is int
         assert type(page_size) is int
