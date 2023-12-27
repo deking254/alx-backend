@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import typing
+print(dir(typing))
 """
 Main file
 """
