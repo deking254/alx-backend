@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""pagination tasks"""
 import csv
 import math
 from typing import List, Tuple
@@ -24,6 +25,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """returns data on a page specified"""
         data = self.dataset()
         assert type(page) is int
         assert type(page_size) is int
@@ -39,6 +41,7 @@ class Server:
             return []
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """returns metadata about a given page"""
         data = self.dataset()
         total_page = None
         next_page = None
