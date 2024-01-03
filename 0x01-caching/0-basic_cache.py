@@ -8,7 +8,8 @@ class BasicCache(BaseCaching):
 
     def put(self, key, item):
         """insert data into the self.cache_data dict"""
-        self.cache_data.update({key: item})
+        if key and item:
+            self.cache_data.update({key: item})
 
     def get(self, key):
         """returns data from self.cache_data"""
