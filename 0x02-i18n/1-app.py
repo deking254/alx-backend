@@ -7,3 +7,4 @@ babel = Babel(app)
 class Config():
     """the configuration class for the app"""
     LANGUAGES = ["en", "fr"]
+    babel.default_locale = 'en'
