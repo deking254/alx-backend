@@ -8,5 +8,4 @@ babel = Babel()
 class Config():
     LANGUAGES = ["en", "fr"]
 app = flask.Flask(__name__)
-app.config = Config
 app.run('0.0.0.0', 5000)
