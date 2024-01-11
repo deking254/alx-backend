@@ -13,4 +13,4 @@ app.config.from_object(Config)
 
 @app.route("/")
 def index():
-    return 
+    return "hello" 
