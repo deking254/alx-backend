@@ -8,5 +8,5 @@ babel = Babel(app)
 class Config():
     """the configuration class for the app"""
     LANGUAGES = ["en", "fr"]
-
+print(locals())
 app.run('0.0.0.0', 5000)
