@@ -8,3 +8,5 @@ class Config():
     """the configuration class for the app"""
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
+print(dir(app))
