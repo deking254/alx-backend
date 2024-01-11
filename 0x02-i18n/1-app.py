@@ -2,10 +2,10 @@
 """using the flask_babel"""
 from flask_babel import Babel
 import flask
-babel = Babel()
-
+app = flask.Flask(__name__)
+babel = Babel().init_app(app)
 
 class Config():
     LANGUAGES = ["en", "fr"]
-app = flask.Flask(__name__)
+
 app.run('0.0.0.0', 5000)
