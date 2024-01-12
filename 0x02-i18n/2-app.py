@@ -15,7 +15,7 @@ class Config():
 
 app.config.from_object(Config)
 
-
+@babel.localeselector
 @app.route('/')
 def get_locale():
     """get the locale from request"""
