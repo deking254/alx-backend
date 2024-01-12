@@ -33,4 +33,3 @@ def get_locale():
     language = request.accept_languages
     best_match = language.best_match(app.config['LANGUAGES'])
     return best_match
-app.run('0.0.0.0', 5000)
