@@ -15,14 +15,16 @@ class Config():
 
 app.config.from_object(Config)
 
+
 @app.route('/')
 def index():
     """this renders the index page"""
-    language = request.accept_languages
-    language.best_match(app.config['LANGUAGES'])
-    return render_template('0-index.html')
-    
+    return get_locale()
+
+
 @babel.localeselector
 def get_locale():
     """get the locale from request"""
-    index()
+    language = request.accept_languages
+    best_match = language.best_match(app.config['LANGUAGES'])
+    return best_match
