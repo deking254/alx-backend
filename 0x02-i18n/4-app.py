@@ -28,6 +28,7 @@ def index():
 def get_locale():
     """get the locale from request"""
     if request.args['locale']:
+        print('werety')
         locale = request.args['locale']
         return locale
     language = request.accept_languages
